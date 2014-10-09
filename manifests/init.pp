@@ -4,9 +4,11 @@
 #
 #   include crashplan
 
-class crashplan {
+class crashplan (
+  $version = '3.6.3',
+) {
   package { 'Crashplan':
-    source   => 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.5.3_Mac.dmg',
-    provider => pkgdmg,
+    source   => "http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_${version}_Mac.dmg",
+    provider => 'pkgdmg',
   }
 }

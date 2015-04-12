@@ -6,7 +6,7 @@
 
 class crashplan {
   package { 'Crashplan':
-    source   => 'http://download.crashplan.com/installs/mac/install/CrashPlan/CrashPlan_3.5.3_Mac.dmg',
+    source   => "http://download2.us.code42.com/installs/mac/install/CrashPlan/CrashPlan_${version}_Mac.dmg",
     provider => pkgdmg,
   }
 }
